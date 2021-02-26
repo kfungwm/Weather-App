@@ -40,17 +40,9 @@ function Weather(props) {
                 <div className="col col-12">
                     {isLoading ? null : <div>            
                         <h2>{weather.location.name}</h2>
-                        <div className=" justify-content-center">
-                            <div className="col-2">
-                            <img src={weather.current.condition.icon}/><p>{weather.current.condition.text}</p>
-                            </div>
-                            
-                                
-                                <p>{weather.current.temp_c} degree</p>
-                            
-                        </div>
-                        
-                       
+                        <h1>{weather.current.temp_c}°</h1>                    
+                        <img src={weather.current.condition.icon}/>
+                        {weather.current.condition.text}                             
                         <p>{weather.forecast.forecastday.[0].astro.sunrise} Sunrise</p>
                         <p>{weather.forecast.forecastday.[0].astro.sunset} Sunset</p>
                     </div>

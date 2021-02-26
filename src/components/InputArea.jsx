@@ -30,14 +30,14 @@ function InputArea(props) {
     return (
         <div className="container">
             <div className="nContainer">
-                <h1>Welcome {headingText}</h1>
+                <h1>Welcome</h1>
                 <p>Please type your City</p>
             
                 <input className="customInput" type="text" name="city" placeholder="City Name" onChange={handleChange} value={input} ></input>
                 <button 
                     className="customButton" 
                     onClick={handleClick}
-                    style={{ backgroundColor: isMousedOver ? "black" : "white" }}
+                    style={{ backgroundColor: isMousedOver ? "green" : "white" }}
                     onMouseOver={handleMouseOver}
                     onMouseOut={handleMouseOut}
                     >Search</button>
