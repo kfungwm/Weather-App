@@ -11,17 +11,22 @@ function App() {
 
   function cityName(input) {
     
-      console.log("new " + input);
+      console.log("Child 1 New input " + input);
       setCityValue(input);
   
   }
-  console.log(cityValue);
+  console.log("Parent " + cityValue);
+
+  
 
   return (
-    <div className="App">
-
-     <InputArea addClick={cityName} />
-     <Weather addCity={cityValue}/>
+    <div className="App container">
+      <div className="row">
+        <div className="col col-sm">
+          <InputArea addClick={cityName}  />
+          <Weather addCity={cityValue}/>
+        </div>
+      </div>
     </div>
   );
 }
